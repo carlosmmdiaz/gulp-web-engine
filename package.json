@@ -1,0 +1,37 @@
+{
+  "name": "gulp-web-engine",
+  "version": "1.0.0",
+  "description": "This is a compilation of gulp tasks that allow you to develop a website in a minimalistic way.",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosmmdiaz/gulp-web-engine.git"
+  },
+  "keywords": [
+    "Gulp-Web-Engine"
+  ],
+  "author": "Carlosmmdiaz <hola@carlosmmdiaz.com> (http://carlosmmdiaz.es)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosmmdiaz/gulp-web-engine/issues"
+  },
+  "homepage": "https://github.com/carlosmmdiaz/gulp-web-engine#readme"
+  ,
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-html-minifier": "^0.1.8",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-util": "^3.0.7",
+    "run-sequence": "^1.2.2",
+    "vinyl-ftp": "^0.5.0"
+  }
+}

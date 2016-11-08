@@ -1,0 +1,32 @@
+@mixin respondTo($media) {
+    @if $media == mobileScreen {
+        @media screen and (max-width: $mobile-width) { @content; }
+    } @else if $media == mobileScreenPortrait {
+        @media screen and (max-width: $mobile-width)
+        and (orientation: portrait) { @content; }
+    } @else if $media == tabletScreen {
+       @media screen and (min-width: $mobile-width + 1) 
+       and (max-width: $tablet-width) 
+       { @content; }
+    } @else if $media == tabletScreenPortrait {
+       @media screen and (min-width: $mobile-width + 1) 
+       and (max-width: $tablet-width) 
+       and (orientation: portrait) 
+       { @content; }
+    } @else if $media == desktopScreen {
+        @media screen and (min-width: $tablet-width + 1) 
+        and (max-width: $desktop-width) 
+        { @content; }
+    } @else if $media == largeScreen {
+        @media only screen and (min-width: $desktop-width + 1) 
+        and (min-width: $large-width) 
+        { @content; }
+    }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

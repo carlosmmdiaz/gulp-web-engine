@@ -1,0 +1,1 @@
+console.log("%cEverything ready", "color: #007AB9; font-family: sans-serif; font-size: 1em; font-weight: bolder;");

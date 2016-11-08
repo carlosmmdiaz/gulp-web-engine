@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible, technology colophon & site info
+
+# TEAM
+
+    Team contact details
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript, Sass, Git,
+    Apache Server Configs
+
+/* SITE */
+	Last update: 
+	Language: English
+	Doctype:HTML5
+	IDE: Sublime Text
