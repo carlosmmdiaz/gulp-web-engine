@@ -18,8 +18,7 @@
   "bugs": {
     "url": "https://github.com/carlosmmdiaz/gulp-web-engine/issues"
   },
-  "homepage": "https://github.com/carlosmmdiaz/gulp-web-engine#readme"
-  ,
+  "homepage": "https://github.com/carlosmmdiaz/gulp-web-engine#readme",
   "devDependencies": {
     "browser-sync": "^2.17.5",
     "fs": "0.0.1-security",
@@ -27,6 +26,7 @@
     "gulp-clean": "^0.3.2",
     "gulp-concat": "^2.6.0",
     "gulp-html-minifier": "^0.1.8",
+    "gulp-image-optimization": "^0.1.3",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2",
     "gulp-uglifyjs": "^0.6.2",

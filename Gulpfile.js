@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     gutil = require('gulp-util'),
     ftp = require('vinyl-ftp'),
+    imageop = require('gulp-image-optimization'),
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload;
 // Setup:
@@ -99,6 +100,13 @@ gulp.task('img-dev', function() {
     return gulp.src(config.src.img)
         .pipe(gulp.dest(config.dev.img));
 });
+gulp.task('img-opt', function(cb) {
+    gulp.src([config.dev.img + '/*']).pipe(imageop({
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
+    })).pipe(gulp.dest(config.dev.img)).on('end', cb).on('error', cb);
+});
 gulp.task('icons-dev', function() {
     return gulp.src(config.src.icons)
         .pipe(gulp.dest(config.dev.icons));
@@ -132,7 +140,8 @@ gulp.task('build-dev', ['clean-dev'], function() {
                        'img-dev', 
                        'icons-dev', 
                        'pdf-dev',
-                       'seo-dev');
+                       'seo-dev',
+                       'img-opt');
 });
 gulp.task('build', ['clean-dist'], function() {
     return runSequence('embedCss-dev',
@@ -142,6 +151,7 @@ gulp.task('build', ['clean-dist'], function() {
                        'icons-dev', 
                        'pdf-dev',
                        'seo-dev',
+                       'img-opt',
                        'move-dist');
 });
 // Deploy tasks:
@@ -165,6 +175,7 @@ gulp.task('deploy', function() {
                        'icons-dev', 
                        'pdf-dev',
                        'seo-dev',
+                       'img-opt',
                        'move-dist',
                        'deploy-ftp');
 });
